@@ -57,21 +57,20 @@
 
     /* ===== HERO ===== */
     .hero {
-      min-height: 100vh;
+      min-height: 85vh;
       background: var(--dark);
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
       position: relative; overflow: hidden;
-      padding: 100px 5% 80px;
+      padding: 100px 5% 40px;
       gap: 48px;
     }
     .hero-bg-shape {
-      position: absolute; top: 0; right: -10%;
-      width: 65%; height: 100%;
-      background: linear-gradient(135deg, var(--blue-mid) 0%, var(--blue-deep) 60%, transparent 100%);
-      clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
-      opacity: 0.35;
+      position: absolute; top: 0; right: -20%;
+      width: 80%; height: 100%;
+      background: radial-gradient(ellipse at center, rgba(33,150,243,0.18) 0%, transparent 65%);
+      opacity: 1;
     }
     .hero-bg-dots {
       position: absolute; bottom: 5%; left: 3%;
@@ -84,8 +83,8 @@
     /* ── Hero Photo (right column) ── */
     .hero-photo {
       position: relative; z-index: 2;
-      display: flex; align-items: flex-end; justify-content: center;
-      height: 100%; min-height: 480px;
+      display: flex; align-items: center; justify-content: center;
+      height: 100%; min-height: 420px;
     }
     /*
      * =====================================================
@@ -120,10 +119,11 @@
     .hero-photo-placeholder .ph-text { font-size: 0.85rem; font-weight: 600; text-align: center; line-height: 1.6; }
     /* Style untuk foto asli setelah placeholder diganti */
     .hero-photo-img {
-      max-height: 520px;
+      max-height: 680px;
       max-width: 100%;
+      width: 100%;
       object-fit: contain;
-      object-position: bottom center;
+      object-position: center;
       filter: drop-shadow(0 20px 48px rgba(11,61,140,0.4));
     }
     @media (max-width: 768px) {
@@ -276,7 +276,7 @@
     /* Client card with logo placeholder */
     .clients-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       gap: 20px;
     }
     .client-card {
@@ -294,8 +294,18 @@
       box-shadow: 0 6px 20px rgba(11,61,140,0.08);
     }
     .client-logo-wrap {
-      width: 80px; height: 80px;
+      width: 110px; height: 110px;
       display: flex; align-items: center; justify-content: center;
+    }
+    .client-logo {
+      max-width: 100%; max-height: 100%;
+      width: auto; height: auto;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.2s;
+    }
+    .client-card:hover .client-logo {
+      transform: scale(1.08);
     }
     /* Placeholder: replace this div with <img> when logo is ready */
     .client-placeholder {
@@ -561,7 +571,7 @@
       .about-grid { grid-template-columns: 1fr; gap: 36px; }
       .hero-stats { gap: 24px; }
       footer { flex-direction: column; text-align: center; }
-      .clients-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+      .clients-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
       .proposal-grid { grid-template-columns: 1fr; gap: 36px; }
       .form-row.split { grid-template-columns: 1fr; }
       .pricing-grid { grid-template-columns: 1fr; }
@@ -638,10 +648,7 @@
       - Simpan foto di folder yang sama dengan index.html
       =====================================================
     -->
-    <div class="hero-photo-placeholder">
-      <div class="ph-icon">🧑‍💼</div>
-      <div class="ph-text">Foto AI ditempatkan di sini<br /><span style="opacity:0.6;font-weight:400;">Lihat komentar HTML untuk cara pasang</span></div>
-    </div>
+    <img src="hero2.png" alt="MKVi · Creative Digital Agency" class="hero-photo-img" />
   </div>
 
 </section>
@@ -809,481 +816,362 @@
     <button class="tab-btn" data-tab="others">Others</button>
   </div>
 
-  <!-- ALL -->
   <div class="client-group active" id="tab-all">
     <div class="clients-grid">
-      
     <div class="client-card">
       <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">FA</div>
+        <img src="logos/farrel.png" alt="Farrel" class="client-logo">
       </div>
-      <div class="client-name">farrel.co.id</div>
+      <div class="client-name">Farrel</div>
     </div>
-      
     <div class="client-card">
       <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">GK</div>
-      </div>
-      <div class="client-name">gokomodo.com</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">MT</div>
-      </div>
-      <div class="client-name">meroketetapjaya.com</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">WW</div>
-      </div>
-      <div class="client-name">woo-wa.com</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">NK</div>
-      </div>
-      <div class="client-name">npkmutiara.com</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">GR</div>
-      </div>
-      <div class="client-name">grouu.id</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">CX</div>
-      </div>
-      <div class="client-name">crox.id</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">TS</div>
-      </div>
-      <div class="client-name">tsurvey.id</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">YS</div>
-      </div>
-      <div class="client-name">yesshesaidido.com</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">SG</div>
-      </div>
-      <div class="client-name">Semut Gajah</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">PC</div>
-      </div>
-      <div class="client-name">Petani Cerdas</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">GK</div>
-      </div>
-      <div class="client-name">Gokomodo App</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">KW</div>
-      </div>
-      <div class="client-name">PT Kampuh Welding</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">FI</div>
-      </div>
-      <div class="client-name">PT Farrel Internusa</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">SA</div>
-      </div>
-      <div class="client-name">LPK Saitama Abadi Jaya</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">EG</div>
-      </div>
-      <div class="client-name">Elkana Gunawan</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">ZC</div>
-      </div>
-      <div class="client-name">ZEE Coll</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">OB</div>
-      </div>
-      <div class="client-name">OBLO</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">RM</div>
-      </div>
-      <div class="client-name">PT Radya Marga Sentosa</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">TE</div>
-      </div>
-      <div class="client-name">PT Tokki Engineering</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">RH</div>
-      </div>
-      <div class="client-name">Rumah Harapan Cikarang</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">KF</div>
-      </div>
-      <div class="client-name">Kembar Fitness</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">BD</div>
-      </div>
-      <div class="client-name">Budhe Dhiva</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">EB</div>
-      </div>
-      <div class="client-name">Essroll Coffee & Bakery</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">KE</div>
-      </div>
-      <div class="client-name">Kobi Education</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">KM</div>
-      </div>
-      <div class="client-name">Kavlingator Modal Dengkul</div>
-    </div>
-    </div>
-  </div>
-
-  <!-- WEBSITE -->
-  <div class="client-group" id="tab-website">
-    <div class="clients-grid">
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">FA</div>
-      </div>
-      <div class="client-name">farrel.co.id</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">GK</div>
-      </div>
-      <div class="client-name">gokomodo.com</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">MT</div>
-      </div>
-      <div class="client-name">meroketetapjaya.com</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">WW</div>
-      </div>
-      <div class="client-name">woo-wa.com</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">NK</div>
-      </div>
-      <div class="client-name">npkmutiara.com</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">GR</div>
-      </div>
-      <div class="client-name">grouu.id</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">CX</div>
-      </div>
-      <div class="client-name">crox.id</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">TS</div>
-      </div>
-      <div class="client-name">tsurvey.id</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">YS</div>
-      </div>
-      <div class="client-name">yesshesaidido.com</div>
-    </div>
-    </div>
-  </div>
-
-  <!-- APPS -->
-  <div class="client-group" id="tab-apps">
-    <div class="clients-grid">
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">SG</div>
-      </div>
-      <div class="client-name">Semut Gajah</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">PC</div>
-      </div>
-      <div class="client-name">Petani Cerdas</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">GK</div>
+        <img src="logos/gokomodo.png" alt="Gokomodo" class="client-logo">
       </div>
       <div class="client-name">Gokomodo</div>
     </div>
-    </div>
-  </div>
-
-  <!-- CP VIDEO -->
-  <div class="client-group" id="tab-cp-video">
-    <div class="clients-grid">
-      
     <div class="client-card">
       <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">TE</div>
+        <img src="logos/meroketetapjaya.png" alt="Meroket Tetap Jaya" class="client-logo">
       </div>
-      <div class="client-name">PT Tokki Engineering & Fabrication</div>
+      <div class="client-name">Meroket Tetap Jaya</div>
     </div>
-      
     <div class="client-card">
       <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">KW</div>
+        <img src="logos/woo-wa.png" alt="Woo-wa" class="client-logo">
+      </div>
+      <div class="client-name">Woo-wa</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/npkmutiara.png" alt="NPK Mutiara" class="client-logo">
+      </div>
+      <div class="client-name">NPK Mutiara</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/grouu.png" alt="Grouu" class="client-logo">
+      </div>
+      <div class="client-name">Grouu</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/crox.png" alt="Crox" class="client-logo">
+      </div>
+      <div class="client-name">Crox</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/tsurvey.png" alt="Tsurvey" class="client-logo">
+      </div>
+      <div class="client-name">Tsurvey</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/yesshesaidido.png" alt="Yes She Said I Do" class="client-logo">
+      </div>
+      <div class="client-name">Yes She Said I Do</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/semut-gajah.png" alt="Semut Gajah" class="client-logo">
+      </div>
+      <div class="client-name">Semut Gajah</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/petani-cerdas.png" alt="Petani Cerdas" class="client-logo">
+      </div>
+      <div class="client-name">Petani Cerdas</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/kampuh-welding.png" alt="Kampuh Welding Cikarang" class="client-logo">
       </div>
       <div class="client-name">Kampuh Welding Cikarang</div>
     </div>
-      
     <div class="client-card">
       <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">RH</div>
+        <img src="logos/tokki-engineering.png" alt="Tokki Engineering & Fabrication" class="client-logo">
+      </div>
+      <div class="client-name">Tokki Engineering & Fabrication</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/rumah-harapan.png" alt="Rumah Harapan Cikarang" class="client-logo">
       </div>
       <div class="client-name">Rumah Harapan Cikarang</div>
     </div>
-      
     <div class="client-card">
       <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">KF</div>
+        <img src="logos/kembar-fitness.png" alt="Kembar Fitness" class="client-logo">
       </div>
       <div class="client-name">Kembar Fitness</div>
     </div>
-      
     <div class="client-card">
       <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">BD</div>
+        <img src="logos/budhe-dhiva.png" alt="Budhe Dhiva" class="client-logo">
+      </div>
+      <div class="client-name">Budhe Dhiva</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/lpk-saitama.png" alt="LPK Saitama Abadi Jaya" class="client-logo">
+      </div>
+      <div class="client-name">LPK Saitama Abadi Jaya</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/elkana-gunawan.png" alt="Elkana Gunawan" class="client-logo">
+      </div>
+      <div class="client-name">Elkana Gunawan</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/zee-coll.png" alt="ZEE Coll" class="client-logo">
+      </div>
+      <div class="client-name">ZEE Coll</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/oblo.png" alt="OBLO" class="client-logo">
+      </div>
+      <div class="client-name">OBLO</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/radya-marga.png" alt="Radya Marga Sentosa" class="client-logo">
+      </div>
+      <div class="client-name">Radya Marga Sentosa</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/essroll.png" alt="Essroll Coffee Bakery" class="client-logo">
+      </div>
+      <div class="client-name">Essroll Coffee Bakery</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/kobi-education.png" alt="Kobi Education" class="client-logo">
+      </div>
+      <div class="client-name">Kobi Education</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/kavlingator.png" alt="Kavlingator" class="client-logo">
+      </div>
+      <div class="client-name">Kavlingator</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/iptij.png" alt="IPTIJ" class="client-logo">
+      </div>
+      <div class="client-name">IPTIJ</div>
+    </div>
+    </div>
+  </div>
+
+  <div class="client-group" id="tab-website">
+    <div class="clients-grid">
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/farrel.png" alt="Farrel" class="client-logo">
+      </div>
+      <div class="client-name">Farrel</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/gokomodo.png" alt="Gokomodo" class="client-logo">
+      </div>
+      <div class="client-name">Gokomodo</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/meroketetapjaya.png" alt="Meroket Tetap Jaya" class="client-logo">
+      </div>
+      <div class="client-name">Meroket Tetap Jaya</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/woo-wa.png" alt="Woo-wa" class="client-logo">
+      </div>
+      <div class="client-name">Woo-wa</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/npkmutiara.png" alt="NPK Mutiara" class="client-logo">
+      </div>
+      <div class="client-name">NPK Mutiara</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/grouu.png" alt="Grouu" class="client-logo">
+      </div>
+      <div class="client-name">Grouu</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/crox.png" alt="Crox" class="client-logo">
+      </div>
+      <div class="client-name">Crox</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/tsurvey.png" alt="Tsurvey" class="client-logo">
+      </div>
+      <div class="client-name">Tsurvey</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/yesshesaidido.png" alt="Yes She Said I Do" class="client-logo">
+      </div>
+      <div class="client-name">Yes She Said I Do</div>
+    </div>
+    </div>
+  </div>
+
+  <div class="client-group" id="tab-apps">
+    <div class="clients-grid">
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/gokomodo.png" alt="Gokomodo" class="client-logo">
+      </div>
+      <div class="client-name">Gokomodo</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/semut-gajah.png" alt="Semut Gajah" class="client-logo">
+      </div>
+      <div class="client-name">Semut Gajah</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/petani-cerdas.png" alt="Petani Cerdas" class="client-logo">
+      </div>
+      <div class="client-name">Petani Cerdas</div>
+    </div>
+    </div>
+  </div>
+
+  <div class="client-group" id="tab-cp-video">
+    <div class="clients-grid">
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/kampuh-welding.png" alt="Kampuh Welding Cikarang" class="client-logo">
+      </div>
+      <div class="client-name">Kampuh Welding Cikarang</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/tokki-engineering.png" alt="Tokki Engineering & Fabrication" class="client-logo">
+      </div>
+      <div class="client-name">Tokki Engineering & Fabrication</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/rumah-harapan.png" alt="Rumah Harapan Cikarang" class="client-logo">
+      </div>
+      <div class="client-name">Rumah Harapan Cikarang</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/kembar-fitness.png" alt="Kembar Fitness" class="client-logo">
+      </div>
+      <div class="client-name">Kembar Fitness</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/budhe-dhiva.png" alt="Budhe Dhiva" class="client-logo">
       </div>
       <div class="client-name">Budhe Dhiva</div>
     </div>
     </div>
   </div>
 
-  <!-- CP DESIGN + BOOK -->
   <div class="client-group" id="tab-cp-design">
     <div class="clients-grid">
-      
     <div class="client-card">
       <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">KW</div>
+        <img src="logos/farrel.png" alt="Farrel" class="client-logo">
       </div>
-      <div class="client-name">PT Kampuh Welding Cikarang</div>
+      <div class="client-name">Farrel</div>
     </div>
-      
     <div class="client-card">
       <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">FI</div>
-      </div>
-      <div class="client-name">PT Farrel Internusa Pratama</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">SA</div>
-      </div>
-      <div class="client-name">LPK Saitama Abadi Jaya</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">EG</div>
-      </div>
-      <div class="client-name">Elkana Gunawan</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">ZC</div>
-      </div>
-      <div class="client-name">ZEE Coll</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">OB</div>
-      </div>
-      <div class="client-name">OBLO</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">RM</div>
-      </div>
-      <div class="client-name">PT Radya Marga Sentosa</div>
-    </div>
-    </div>
-  </div>
-
-  <!-- DIGITAL MARKETING -->
-  <div class="client-group" id="tab-digimkt">
-    <div class="clients-grid">
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">EB</div>
-      </div>
-      <div class="client-name">Essroll Coffee & Bakery</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">KE</div>
-      </div>
-      <div class="client-name">Kobi Education</div>
-    </div>
-      
-    <div class="client-card">
-      <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">KW</div>
+        <img src="logos/kampuh-welding.png" alt="Kampuh Welding Cikarang" class="client-logo">
       </div>
       <div class="client-name">Kampuh Welding Cikarang</div>
     </div>
-      
     <div class="client-card">
       <div class="client-logo-wrap">
-        <!-- REPLACE: swap the .client-placeholder div below with an <img> tag when logo is ready -->
-        <div class="client-placeholder">KM</div>
+        <img src="logos/lpk-saitama.png" alt="LPK Saitama Abadi Jaya" class="client-logo">
       </div>
-      <div class="client-name">Kavlingator Modal Dengkul</div>
+      <div class="client-name">LPK Saitama Abadi Jaya</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/elkana-gunawan.png" alt="Elkana Gunawan" class="client-logo">
+      </div>
+      <div class="client-name">Elkana Gunawan</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/zee-coll.png" alt="ZEE Coll" class="client-logo">
+      </div>
+      <div class="client-name">ZEE Coll</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/oblo.png" alt="OBLO" class="client-logo">
+      </div>
+      <div class="client-name">OBLO</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/radya-marga.png" alt="Radya Marga Sentosa" class="client-logo">
+      </div>
+      <div class="client-name">Radya Marga Sentosa</div>
     </div>
     </div>
   </div>
 
-  <!-- OTHERS -->
+  <div class="client-group" id="tab-digimkt">
+    <div class="clients-grid">
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/kampuh-welding.png" alt="Kampuh Welding Cikarang" class="client-logo">
+      </div>
+      <div class="client-name">Kampuh Welding Cikarang</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/essroll.png" alt="Essroll Coffee Bakery" class="client-logo">
+      </div>
+      <div class="client-name">Essroll Coffee Bakery</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/kobi-education.png" alt="Kobi Education" class="client-logo">
+      </div>
+      <div class="client-name">Kobi Education</div>
+    </div>
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/kavlingator.png" alt="Kavlingator" class="client-logo">
+      </div>
+      <div class="client-name">Kavlingator</div>
+    </div>
+    </div>
+  </div>
+
   <div class="client-group" id="tab-others">
     <div class="clients-grid">
-      <!-- Tambahkan klien lainnya di sini -->
-      <div style="grid-column:1/-1; text-align:center; color:var(--slate); padding:40px 0; font-size:0.95rem;">
-        Klien lainnya akan ditampilkan di sini.
+    <div class="client-card">
+      <div class="client-logo-wrap">
+        <img src="logos/iptij.png" alt="IPTIJ" class="client-logo">
       </div>
+      <div class="client-name">IPTIJ</div>
+    </div>
     </div>
   </div>
 
