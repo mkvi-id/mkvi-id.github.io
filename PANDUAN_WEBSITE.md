@@ -11,7 +11,7 @@ Dokumen ini berisi langkah-langkah praktis untuk update website MKVi sendiri —
 ## Daftar Isi
 
 1. [Persiapan Sebelum Edit](#1-persiapan-sebelum-edit)
-2. [Update File PDF (PriceList, Detail Layanan, Proposal)](#2-update-file-pdf)
+2. [Update File PDF (Detail Layanan, Proposal)](#2-update-file-pdf)
 3. [Mengganti Logo Klien](#3-mengganti-logo-klien)
 4. [Mengganti Gambar Hero](#4-mengganti-gambar-hero)
 5. [Update Service Card](#5-update-service-card)
@@ -51,25 +51,26 @@ Install extension **"Live Server"** di VS Code. Setelah install:
 ## 2. Update File PDF
 
 ### Kapan dilakukan?
-Ketika file PDF (PriceList, Detail Layanan, Proposal) sudah final desainnya dan ingin replace versi draft.
+Ketika file PDF (Detail Layanan, Proposal) sudah final desainnya dan ingin replace versi draft.
 
 ### ⚠️ PENTING: Jaga nama file persis sama
 
 Nama file harus sama persis dengan yang sudah ada di repo:
-- `PriceList_MKVi_2026.pdf`
 - `Detail_Layanan_MKVi_2026.pdf`
+
+> **Catatan:** File `PriceList_MKVi_2026.pdf` sudah di-deprecate karena isinya tercakup di Detail Layanan.
 
 Kalau nama file diubah, link download di website akan **broken**.
 
 ### Cara 1: Via Web Browser (paling mudah)
 
 1. Buka [github.com/mkvi-id/mkvi-id.github.io](https://github.com/mkvi-id/mkvi-id.github.io)
-2. Klik nama file PDF yang mau diganti (misal `PriceList_MKVi_2026.pdf`)
+2. Klik nama file PDF yang mau diganti (misal `Detail_Layanan_MKVi_2026.pdf`)
 3. Klik ikon **pensil ✏️** di kanan atas → tidak bisa edit PDF, jadi:
-4. Klik ikon **trash 🗑️** → commit message: `Replace PriceList with final version` → Commit
+4. Klik ikon **trash 🗑️** → commit message: `Replace Detail Layanan with final version` → Commit
 5. Balik ke halaman utama repo → klik **"Add file" → "Upload files"**
 6. Drag PDF versi baru (dengan nama persis sama)
-7. Commit message: `Add new PriceList`
+7. Commit message: `Add new Detail Layanan`
 8. Commit changes
 9. **Tunggu 1-2 menit** untuk GitHub Pages rebuild
 
@@ -85,7 +86,7 @@ cd mkvi-website-git
 # 1. Copy PDF baru ke folder ini (overwrite yang lama)
 # 2. Commit & push
 git add .
-git commit -m "Update PriceList PDF: final design"
+git commit -m "Update Detail Layanan PDF: final design"
 git push
 ```
 
@@ -423,10 +424,10 @@ Ini force browser load versi terbaru, bukan dari cache.
 
 **Cek di `index.html`:**
 ```html
-<a href="PriceList_MKVi_2026.pdf">
+<a href="Detail_Layanan_MKVi_2026.pdf">
 ```
 
-Pastikan `PriceList_MKVi_2026.pdf` ada di root repo dengan nama **persis sama** (case-sensitive: `PriceList` bukan `pricelist`).
+Pastikan `Detail_Layanan_MKVi_2026.pdf` ada di root repo dengan nama **persis sama** (case-sensitive).
 
 ### "Form submit tapi tidak ada email"
 
